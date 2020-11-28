@@ -166,7 +166,41 @@ os.path.isdir('/ect/passwd')
 os.path.join('a','b')
 ```
 
-###### 手动编写一个daemon进程
+###### re
+
+```python
+import re
+
+prog=re.compile(pattern)
+result=prog.match(string)
+# 等价于
+result=re.match(pattren,string)
+
+#匹配11位数字
+re.match('.{11}','18888888888')
+#获取匹配内容
+re.match('.{11}','18888888888').group()
+#获取匹配范围
+re.match('.{11}','18888888888').span()
+#匹配邮箱
+re.match('.*@.*','123@123.com')
+#分组
+re.match('(.*)@(.*)','123@123.com').group(1)
+#扫描字符串
+re.search("@","123@123.com")
+re.findall("123","123@123.com")
+#替换字符串
+re.sub("123","456","123@123.com")
+re.sub("\d+","456","123@123.com")
+#分割字符串
+re.split("@","123@123.com")
+re.split("(@)","123@123.com")
+
+```
+
+
+
+##### 手动编写一个daemon进程
 
 ```python
 #!/usr/bin/env python
@@ -239,3 +273,4 @@ if __name__ == "__main__":
     test()
 ```
 
+re
