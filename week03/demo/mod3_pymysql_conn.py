@@ -8,7 +8,7 @@ import pymysql
 # mysql> create database testdb;
 # mysql> GRANT ALL PRIVILEGES ON testdb.* TO 'testuser'@'%' IDENTIFIED BY 'testpass';
 
-db = pymysql.connect("server1","testuser","testpass","testdb" )
+db = pymysql.connect("server1","testuser","testpass","testdb",cursorclass=pymysql.cursors.DictCursor )
  
 try:
 
