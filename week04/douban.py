@@ -2,7 +2,7 @@ import requests
 from lxml import etree
 from time import sleep
 import pymysql
-import time
+
 
 db = pymysql.connect("127.0.0.1", "root", "root", "testdb",
                      cursorclass=pymysql.cursors.DictCursor)
