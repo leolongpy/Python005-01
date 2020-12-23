@@ -9,7 +9,7 @@ def sendsms(telephone_number, content):
         print(content)
         r.incrby(f'telnum_{telephone_number}', amount=1)
         if not num:
-            r.expire('telnum',60)
+            r.expire(f'telnum_{telephone_number}',60)
 
 
 sendsms(18810636797,'hello')
